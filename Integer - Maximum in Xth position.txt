@@ -1,0 +1,27 @@
+import java.util.*;
+public class Hello {
+
+public static void main(String[] args) {
+//Your Code Here
+Scanner sc= new Scanner(System.in);
+int n=sc.nextInt();
+long arr[]= new long[n];
+for(int i=0;i<n;i++)
+{
+   arr[i]=sc.nextLong();
+}
+int x=sc.nextInt();
+long val=(long)Math.pow(10,x-1);
+long max=0,aval=0;
+for(int i=0;i<n;i++)
+{
+   if(((arr[i]/val)%10)>max)
+   {
+       aval=arr[i];
+       max=((arr[i]/val)%10);
+   }
+}
+System.out.print(aval);
+
+}
+}

@@ -1,0 +1,13 @@
+import java.util.*;
+public class Hello {
+
+    public static void main(String[] args) {
+		//Your Code Here
+		Scanner sc= new Scanner(System.in);
+		String n=sc.next();
+                for(int i=0;i<n.length()-1;i++)
+                {
+                     System.out.print(Integer.parseInt(n.substring(0,i+1)*Integer.parseInt(i+1)+" ");
+                }
+	}
+}

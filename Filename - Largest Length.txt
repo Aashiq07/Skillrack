@@ -1,0 +1,37 @@
+import java.util.*;
+public class Hello {
+
+    public static void main(String[] args) {
+		//Your Code Here
+		Scanner sc= new Scanner(System.in);
+		int n=sc.nextInt();
+		String arr[]= new String[n];
+		for(int i=0;i<n;i++)
+		{
+		    arr[i]=sc.next();
+		}
+		String e=sc.next();
+		String s=e.substring(1,e.length()),val="";
+		int len=0;
+		boolean flag=false;
+		for(int i=0;i<n;i++)
+		{
+		    String arr1[]=arr[i].split("[.]");
+		    if(arr1[1].equals(s))
+		    {
+		        if(arr1[0].length()>len)
+		        {
+		            len=arr1[0].length();
+		            val=arr1[0];
+		            flag=true;
+		        }
+		    }
+		}
+		if(!flag)
+		{
+		    System.out.print("FILE NOT FOUND");
+		    System.exit(0);
+		}
+		System.out.print(val+"."+s);
+	}
+}

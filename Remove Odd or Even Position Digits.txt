@@ -1,0 +1,17 @@
+import java.util.*;
+public class Hello {
+
+    public static void main(String[] args) {
+		//Your Code Here
+		Scanner sc=new Scanner(System.in);
+		String s=sc.next(),ev="",ov="";
+		for(int i=0;i<s.length();i++)
+		{
+		    if(i%2==0)
+		    ev+=s.charAt(i);
+		    else
+		    ov+=s.charAt(i);
+		}
+		System.out.print(Long.parseLong(s)%2==0?Long.parseLong(ev):Long.parseLong(ov));
+	}
+}

@@ -1,0 +1,25 @@
+import java.util.*;
+public class Hello {
+
+    public static void main(String[] args) {
+		//Your Code Here
+		Scanner sc= new Scanner(System.in);
+		char ch= sc.next().charAt(0);
+		String vow="aeiou";
+		for(char c=ch;c<='z';c++)
+		{
+		    if(vow.indexOf(c)==-1)
+		    {
+		        System.out.print(c);
+		    }
+		}
+		for(char c='a';c<ch;c++)
+		{
+		    if(vow.indexOf(c)==-1)
+		    {
+		        System.out.print(c);
+		    }
+		}
+
+	}
+}

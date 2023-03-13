@@ -1,0 +1,31 @@
+import java.util.*;
+public class Hello {
+
+    public static void main(String[] args) {
+		//Your Code Here
+		Scanner sc= new Scanner(System.in);
+		String s=sc.next();
+		boolean val=true;
+		for(int i=0;i<s.length();i++)
+		{
+		    if(!Character.isAlphabetic(s.charAt(i)) && !Character.isDigit(s.charAt(i)))
+		    {
+		        if(val)
+		        {
+		            System.out.print('.');
+		            val=false;
+		        }
+		        else
+		        {
+		            System.out.print(',');
+		            val=true;
+		        }
+		    }
+		    else
+		    {
+		        System.out.print(s.charAt(i));
+		    }
+		}
+
+	}
+}

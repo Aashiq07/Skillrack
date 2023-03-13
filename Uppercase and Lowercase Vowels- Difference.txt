@@ -1,0 +1,24 @@
+import java.util.*;
+public class Hello {
+
+    public static void main(String[] args) {
+		//Your Code Here
+		Scanner sc= new Scanner(System.in);
+		String s=sc.next();
+		int uc=0,lc=0;
+		String vow="AEIOUaeiou";
+		for(int i=0;i<s.length();i++)
+		{
+		    if(Character.isUpperCase(s.charAt(i)) && vow.indexOf(s.charAt(i))!=-1)
+		    {
+		        uc++;
+		    }
+		    else if(Character.isLowerCase(s.charAt(i))&& vow.indexOf(s.charAt(i))!=-1)
+		    {
+		        lc++;
+		    }
+		}
+		System.out.print(Math.abs(uc-lc));
+
+	}
+}

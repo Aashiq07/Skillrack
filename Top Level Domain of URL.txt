@@ -1,0 +1,32 @@
+import java.util.*;
+public class Hello {
+
+    public static void main(String[] args) {
+		//Your Code Here
+		Scanner sc= new Scanner(System.in);
+		String s=sc.next(),st="";
+		boolean val=true;
+		int count=0;
+		for(int i=0;i<s.length();i++)
+		{
+		    if(!val)
+		    {
+		        if(s.charAt(i)=='/')
+		        break;
+		    st+=s.charAt(i);
+		    continue;
+		    }
+		    if(s.charAt(i)=='/')
+		    {
+		        count++;
+		    }
+		    if(count==2)
+		    {
+		        val=false;
+		    }
+		}
+		String arr[]= st.split("\\.");
+		System.out.print("."+arr[arr.length-1]);
+		
+    }	
+}

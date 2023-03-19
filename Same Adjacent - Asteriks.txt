@@ -1,0 +1,26 @@
+import java.util.*;
+public class Hello {
+
+    public static void main(String[] args) {
+		//Your Code Here
+		Scanner sc= new Scanner(System.in);
+		String s=sc.next();
+		int stc=0,ac=0;
+		for(int i=0;i<s.length();i++)
+		{
+                    if(i==0 || i==s.length()-1)
+                    {
+                        continue;
+                    }
+		    if(s.charAt(i)=='*')
+		    {
+		        stc++;
+		        if(s.charAt(i-1)==s.charAt(i+1))
+		        {
+		            ac++;
+		        }
+		    }
+		}
+		System.out.print(stc==ac?"YES":"NO");
+	}
+}

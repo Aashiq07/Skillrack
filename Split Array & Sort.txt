@@ -1,0 +1,40 @@
+import java.util.*;
+public class Hello {
+
+    public static void main(String[] args) {
+		//Your Code Here
+		Scanner sc= new Scanner(System.in);
+		int n=sc.nextInt();
+		int arr[]= new int[n];
+		ArrayList<Integer> l1= new ArrayList<Integer>();
+		ArrayList<Integer> l2= new ArrayList<Integer>();
+		int p=sc.nextInt();
+		for(int i=0;i<n;i++)
+		{
+		    arr[i]=sc.nextInt();
+		}
+		for(int i=0;i<p;i++)
+		{
+		    l1.add(arr[i]);
+		}
+		for(int i=p;i<n;i++)
+		{
+		    l2.add(arr[i]);
+		}
+		Collections.sort(l1);
+		Collections.sort(l2);
+		Object obj1[]= l1.toArray();
+		for(Object obj:obj1)
+		{
+		    System.out.print(obj+" ");
+		}
+		System.out.println();
+		Object obj2[]= l2.toArray();
+		for(Object obj:obj2)
+		{
+		    System.out.print(obj+" ");
+		}
+		
+
+	}
+}

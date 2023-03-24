@@ -1,0 +1,19 @@
+import java.util.*;
+public class Hello {
+
+    public static void main(String[] args) {
+		//Your Code Here
+		Scanner sc= new Scanner(System.in);
+		int p=sc.nextInt();
+		if(p<=1000)
+		{
+		    System.out.printf("%.2f",0.1*p);
+		}
+		else
+		{
+		    int val=p-1000;
+		    System.out.printf("%.2f",val*0.05+1000*0.1);
+		}
+
+	}
+}

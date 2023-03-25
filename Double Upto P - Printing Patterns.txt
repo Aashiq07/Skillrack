@@ -1,0 +1,28 @@
+import java.util.*;
+public class Hello {
+
+    public static void main(String[] args) {
+		//Your Code Here
+		Scanner sc= new Scanner(System.in);
+		int n=sc.nextInt();
+		int p=sc.nextInt();
+		for(int i=1;i<=n;i++)
+		{
+		    if(i<=p)
+		    {
+		        for(int j=0;j<i*2;j++)
+		        {
+		            System.out.print(i+" ");
+		        }
+		    }
+		    else
+		    {
+		        for(int k=0;k<i;k++)
+		        {
+		            System.out.print(i+" ");
+		        }
+		    }
+		    System.out.println();
+		}
+	}
+}

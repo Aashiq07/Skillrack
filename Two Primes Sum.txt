@@ -1,0 +1,36 @@
+import java.util.*;
+import java.math.BigInteger;
+public class Hello {
+    public static void main(String[] args) {
+        Scanner sc= new Scanner(System.in);
+        int n=sc.nextInt();
+        boolean flag=true;
+        for(int i=2;i<=n/2;i++)
+        {
+            String val1=String.valueOf(i);
+            if(isPrime(val1))
+            {
+                String val2=String.valueOf(n-i);
+                if(isPrime(val2))
+                {
+                    System.out.print(i);
+                    System.out.print(" "+(n-i));
+                    flag=false;
+                    break;
+                }
+            }
+        }
+        if(flag){
+              System.out.print(-1);
+          }
+    }
+    public static boolean isPrime(String n)
+    {
+        BigInteger sb= new BigInteger(n);
+        if(sb.isProbablePrime(1))
+        {
+        return true;
+        }
+        return false;
+    }
+}

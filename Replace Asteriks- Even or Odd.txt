@@ -1,0 +1,109 @@
+import java.util.*;
+public class Main {
+
+    public static void main(String[] args) {
+		//Your Code Here
+		Scanner sc= new Scanner(System.in);
+		int r=sc.nextInt();
+		int c=sc.nextInt();
+		int arr[][]= new int[r][c];
+		for(int i=0;i<r;i++)
+		{
+		    for(int j=0;j<c;j++)
+		    {
+		        arr[i][j]=sc.nextInt();
+		    }
+		}
+		ArrayList<Integer> l= new ArrayList<Integer>();
+		int ev=0,oc=0;
+		for(int i=0;i<r;i++)
+		{
+		    for(int j=0;j<c;j++)
+		    {
+		        if(arr[i][j]%2==0)
+		            ev++;
+		        else
+		            oc++;
+		        
+		    }
+		}
+		for(int i=0;i<r;i++)
+		{
+		    int ec=0,oco=0;
+		    for(int j=0;j<c;j++)
+		    {
+		        if(arr[i][j]%2==0)
+		        {
+		            ec++;
+		            if(ec==c)
+		            {
+		                l.add(i);
+		            }
+		        }
+		        else
+		        {
+		            oco++;
+		            if(oco==c)
+		            {
+		                l.add(i);
+		            }
+		        }
+		    }
+		}
+		if(ev>=oc)
+		{
+		   for(int i=0;i<r;i++)
+		   {
+		           for(int j=0;j<c;j++)
+		           {
+		                   if(l.contains(i))
+		                   {
+		                           continue;
+		                   }
+		                   else{
+		                           if(arr[i][j]%2==0)
+		                           {
+		                                   System.out.print('*'+" ");
+		                           }
+		                           else
+		                           {
+		                                   System.out.print(arr[i][j]+" ");
+		                           }
+		                           
+		                   }
+		           }
+		           System.out.println();
+		   }
+		}
+		else
+		{
+		    for(int i=0;i<r;i++)
+		   {
+		           for(int j=0;j<c;j++)
+		           {
+		                   if(l.contains(i))
+		                   {
+		                           continue;
+		                   }
+		                   else{
+		                           if(arr[i][j]%2==1)
+		                           {
+		                                   System.out.print('*'+" ");
+		                           }
+		                           else
+		                           {
+		                                   System.out.print(arr[i][j]+" ");
+		                           }
+		                           
+		                   }
+		           }
+		           System.out.println();
+		}
+		}
+		if(l.size()==r)
+		{
+		        System.out.print(-1);
+		}
+		
+    }
+}

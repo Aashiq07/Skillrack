@@ -1,0 +1,41 @@
+import java.util.*;
+public class Hello {
+
+    public static void main(String[] args) {
+		//Your Code Here
+		Scanner sc= new Scanner(System.in);
+		ArrayList<Integer> l = new ArrayList<Integer>();
+		while(sc.hasNextInt())
+		{
+		    int a=sc.nextInt();
+		    l.add(a);
+		}
+		HashMap<Integer,Character> h= new HashMap<Integer,Character>();
+		h.put(0,'A');
+		h.put(1,'B');
+		h.put(2,'C');
+		h.put(3,'D');
+		h.put(4,'E');
+		h.put(5,'F');
+		h.put(6,'G');
+		h.put(7,'H');
+		h.put(8,'I');
+		h.put(9,'J');
+		for(int i=0;i<l.size();i++)
+		{
+		    int a=0;
+		    if(i==l.size()-1)
+		        a=l.get(l.size()-1);
+		    else
+		        a=l.get(i)+l.get(i+1);
+		    String v=Integer.toString(a);
+		    for(int j=0;j<v.length();j++)
+		    {
+		        char c=v.charAt(j);
+		        System.out.print(h.get(c-48));
+		    }
+		    System.out.print(" ");
+		}
+		
+	}
+}

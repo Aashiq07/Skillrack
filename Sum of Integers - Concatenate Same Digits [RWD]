@@ -1,0 +1,50 @@
+import java.util.*;
+public class Hello {
+
+    public static void main(String[] args) {
+		//Your Code Here
+		Scanner sc= new Scanner(System.in);
+		int n=sc.nextInt();
+                long sum=0;
+		int arr[]= new int[n];
+		for(int i=0;i<n;i++)
+		{
+		    arr[i]=sc.nextInt();
+		}
+		ArrayList<Integer> l = new ArrayList<Integer>();
+		Arrays.sort(arr);
+		int count[]= new int[10];
+		for(int i=0;i<n;i++)
+		{
+		    int a=arr[i];
+	        while(a!=0)
+	        {
+	            int rem=a%10;
+	            count[rem]++;
+	            a/=10;
+	        }
+		}
+		String j="0";
+		for(int i=0;i<count.length;i++)
+		{
+		    int val=count[i];
+		    if(val<=0)
+		    {
+		        int fval=Integer.parseInt(j);
+		        fval++;
+		        j=String.valueOf(fval);
+		        continue;
+		    }
+		    else
+		    {
+		        String s=j.repeat(val);
+		        long res=Long.parseLong(s);
+		        sum+=res;
+		        int fval=Integer.parseInt(j);
+		        fval++;
+		        j=String.valueOf(fval);
+		    }
+		}
+		System.out.print(sum);
+	}
+}

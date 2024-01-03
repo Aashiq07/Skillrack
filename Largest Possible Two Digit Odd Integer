@@ -1,0 +1,41 @@
+import java.util.*;
+public class Hello {
+
+    public static void main(String[] args) {
+		//Your Code Here
+		Scanner sc= new Scanner(System.in);
+		String x=sc.next();
+		String y=sc.next();
+		ArrayList<Integer> l = new ArrayList<Integer>();
+		boolean f=true;
+		for(int i=0;i<x.length();i++)
+		{
+		    for(int j=0;j<y.length();j++)
+		    {
+		        String a=String.valueOf(x.charAt(i))+String.valueOf(y.charAt(j));
+		        int val=Integer.parseInt(a);
+		        if(val%2==1)
+		        {
+		          l.add(val);
+		          f=false;
+		        }
+		    }
+		}
+		for(int i=0;i<y.length();i++)
+		{
+		    for(int j=0;j<x.length();j++)
+		    {
+		        String a=String.valueOf(y.charAt(i))+String.valueOf(x.charAt(j));
+		        int val=Integer.parseInt(a);
+		        if(val%2==1)
+		        {
+		          l.add(val);
+		          f=false;
+		        }
+		    }
+		}
+		Collections.sort(l);
+		System.out.print(f?"-1":l.get(l.size()-1));
+
+	}
+}

@@ -1,0 +1,33 @@
+import java.util.*;
+public class Hello {
+
+    public static void main(String[] args) {
+		//Your Code Here
+		Scanner sc= new Scanner(System.in);
+		int m=sc.nextInt(),c=0;
+		int n=sc.nextInt();
+		long arr1[]= new long[m];
+		long arr2[]= new long[n];
+		for(int i=0;i<m;i++)
+		{
+		    arr1[i]=sc.nextLong();
+		}
+		for(int j=0;j<n;j++)
+		{
+		    arr2[j]=sc.nextLong();
+		}
+		for(int i=0;i<m;i++)
+		{
+		    for(int j=0;j<n;j++)
+		    {
+		        int id=(int)Math.log10(arr1[i])+1;
+		        int jd=(int)Math.log10(arr2[j])+1;
+		        if(id!=jd)
+		        {
+		            c++;
+		        }
+		    }
+		}
+		System.out.print(c);
+	}
+}

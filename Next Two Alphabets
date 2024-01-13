@@ -1,0 +1,22 @@
+import java.util.*;
+public class Hello {
+
+    public static void main(String[] args) {
+		//Your Code Here
+		Scanner sc= new Scanner(System.in);
+		char ch= sc.next().charAt(0);
+		String s="abcdefghijklmnopqrstuvwxyz";
+		int a=ch&31;
+		if(Character.isLowerCase(ch))
+		{
+		   System.out.print(s.charAt((a)%26)+" ");
+		   System.out.print(s.charAt((a+1)%26));
+		}
+		else
+		{
+		    System.out.print(Character.toUpperCase(s.charAt((a)%26))+" ");
+		    System.out.print(Character.toUpperCase(s.charAt((a+1)%26)));
+		}
+		
+	}
+}

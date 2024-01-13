@@ -1,0 +1,21 @@
+import java.util.*;
+public class Hello {
+
+    public static void main(String[] args) {
+		//Your Code Here
+		Scanner sc= new Scanner(System.in);
+		String n=sc.next();
+		int sum=0;
+		if(n.charAt(n.length()-1)=='0')
+		{
+		    System.out.print(-1);
+		    System.exit(0);
+		}
+		int val=n.charAt(n.length()-1)-48;
+		for(int i=n.length()-1;i>=n.length()-val;i--)
+		{
+		    sum+=n.charAt(i)-48;
+		}
+		System.out.print(n.length());
+	}
+}
